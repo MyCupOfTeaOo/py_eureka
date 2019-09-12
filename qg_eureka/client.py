@@ -13,10 +13,7 @@ import requests
 
 from .exc import EurekaException
 
-try:
-    import ujson as json
-except ImportError:
-    import json
+import json
 
 
 from .log import logger

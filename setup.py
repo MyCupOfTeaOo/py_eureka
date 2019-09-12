@@ -22,7 +22,6 @@ setup(
         "setuptools>=41.0.1",
         "requests>=2.21.0",
         "typing>=3.7.4.1",
-        "ujson>=1.35",
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
