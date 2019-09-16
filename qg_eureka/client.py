@@ -73,7 +73,6 @@ class EurekaClient:
                                 we will just use the server IP with '/info'.
         """
 
-        # atexit.register()
         self._eureka_url = eureka_url.rstrip('/') + '/eureka'
         self._app_name = app_name
         self._port = port
@@ -243,8 +242,9 @@ class EurekaClient:
         if 400 <= resp.status_code < 600:
             raise EurekaException(HTTPStatus(resp.status_code),
                                   resp.text)
-        logger.debug('Result: %s', resp.status)
-        return resp.json()
+        logger.debug('Result: %s', resp.status_code)
+        if resp.text:
+            return resp.json()
 
     def _generate_instance_id(self) -> str:
         """Generates a unique instance id"""
