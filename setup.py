@@ -9,6 +9,7 @@ setup(
     description=(
         '全高连接eureka组件'
     ),
+    long_description_content_type="text/markdown",
     long_description=open('README.md').read(),
     author='zouwendi',
     author_email='tz310200@gamil.com',
@@ -27,7 +28,6 @@ setup(
         'Development Status :: 4 - Beta',
         'Operating System :: OS Independent',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GPL3 License',
         'Programming Language :: Python',
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: 3',
